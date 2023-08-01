@@ -111,5 +111,5 @@ Welcome to my GitHub portfolio, where you'll find a collection of my projects sh
 <hr>
 
 <p align="center">
-  <img src="readmeres/endingGif.gif" alt="Upek's Github final image" width="600" height="300">
+  The 3D model which I used here <a href="https://sketchfab.com/3d-models/halo-mk-v-model-ff8a4e4f9d1f4fdeb3a1d887f6f70dae">Halo Mk V Model By : Pep</a>
 </p>
