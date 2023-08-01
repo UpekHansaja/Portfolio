@@ -87,7 +87,7 @@ function animate() {
   if (object && objToRender === "halo") {
     //I've played with the constants here until it looked good 
     object.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    // object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
+    object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
   }
   renderer.render(scene, camera);
 }
