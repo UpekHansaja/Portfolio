@@ -34,7 +34,7 @@ loader.load(
     //If the file is loaded, add it to the scene
     object = gltf.scene;
     scene.add(object);
-    object.rotation.y = -15;
+    // object.rotation.y = -15;
     scene.rotation.y = 15;
   },
   function (xhr) {
