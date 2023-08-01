@@ -34,8 +34,9 @@ loader.load(
     //If the file is loaded, add it to the scene
     object = gltf.scene;
     scene.add(object);
-    // object.rotation.y = -15;
+    // object.rotation.y = -10;
     scene.rotation.y = 15;
+    scene.position.x = 0.25;
   },
   function (xhr) {
     //While it is loading, log the progress
@@ -87,7 +88,7 @@ function animate() {
   if (object && objToRender === "halo") {
     //I've played with the constants here until it looked good 
     object.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
+    // object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
   }
   renderer.render(scene, camera);
 }
