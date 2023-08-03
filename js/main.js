@@ -1,9 +1,11 @@
 //Import the THREE.js library
 // import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-import * as THREE from 'three';
-import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
+// import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
 // import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+// import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118.3/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
 
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
@@ -64,26 +66,9 @@ loader.load(
 const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows for the transparent background
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-THREE.ColorManagement.enabled = true;
-
 //Add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);      // append selected container (area)
 // document.body.appendChild( renderer.domElement );      // append Full body
-
-renderer.outputColorSpace = THREE.SRGBColorSpace; // optional with post-processing
-const composer = new EffectComposer( renderer );
-
-const renderPass = new RenderPass( scene, camera );
-composer.addPass( renderPass );
-
-const glitchPass = new GlitchPass();
-composer.addPass( glitchPass );
-
-const outputPass = new OutputPass();
-composer.addPass( outputPass );
-
-const luminosityPass = new ShaderPass( LuminosityShader );
-composer.addPass( luminosityPass );
 
 //Set how far the camera will be from the 3D model
 // camera.position.z = objToRender === "dino" ? 25 : 500;
@@ -108,7 +93,6 @@ scene.add(ambientLight);
 function animate() {
   requestAnimationFrame(animate);
   //Here we could add some code to update the scene, adding some automatic movement
-  composer.render();
 
   //Make the halo move
   if (object && objToRender === "halo") {
