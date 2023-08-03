@@ -1,5 +1,4 @@
 var preLoader = document.getElementById("preLoader");
-var canvas = document.querySelectorAll("#container3D canvas");
 
 function checkImage(imageSrc, good, bad) {
   var img = new Image();
