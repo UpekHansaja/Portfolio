@@ -14,9 +14,9 @@ checkImage(
     window.addEventListener("load", function () {
       preLoader.classList.remove = "loaderImg";
       preLoader.classList.add = "fade-out";
-      if ((preLoader.classList.contains = "fade-out")) {
+      // if ((preLoader.classList.contains = "fade-out")) {
         preLoader.style.display = "none";
-      }
+      // }
     });
   },
   function () {
