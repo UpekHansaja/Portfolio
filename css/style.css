@@ -1,13 +1,14 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #000;
+  background-color: #011925;
+  /* height: 100%; */
 }
 
 header {
   margin-top: 3em;
   text-align: center;
-  color: white;
+  color: rgb(245, 233, 206);
 }
 
 header h1 {
