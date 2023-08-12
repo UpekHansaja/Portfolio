@@ -23,3 +23,4 @@ checkImage(
     console.log("wating for 3D model to load...");
   }
 );
+
